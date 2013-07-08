@@ -1,0 +1,11 @@
+joe:
+  name: Joe User
+  username: joe_user
+  email: joe_user@example.com
+  password_digest: something
+
+jane:
+  name: Jane User
+  username: jane_user
+  email: jane_user@example.com
+  password_digest: something
