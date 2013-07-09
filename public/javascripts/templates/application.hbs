@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <a class="brand" href="#">Simple Auth</a>
+      <ul class="nav">
+        <li>{{#linkTo 'index'}}Home{{/linkTo}}</li>
+        <li>{{#linkTo 'top_secret'}}Top Secret{{/linkTo}}</li>
+
+        {{#if isAuthenticated}}
+          <li><a href="#">{{currentUser.email}}</a></li>
+          <li><a href="#" {{action 'logout'}}>Logout</a></li>
+        {{else}}
+          <li>{{#linkTo 'users.new'}}Register{{/linkTo}}</li>
+          <li>{{#linkTo 'sessions.new'}}Login{{/linkTo}}</li>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+
+  {{outlet}}
+</div>

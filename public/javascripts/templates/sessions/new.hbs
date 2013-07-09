@@ -1,0 +1,16 @@
+<h2>Login</h2>
+
+<form {{action "loginUser" on="submit"}}>
+  <div>
+    <label for="">Username or Email</label>
+    {{input type="text" value=username_or_email placeholder="Username or Email Address"}}
+  </div>
+
+  <div>
+    <label for="">Password</label>
+    {{input type="password" value=password placeholder="Password"}}
+  </div>
+
+  <br>
+  <button type="submit">Submit</button>
+</form>
