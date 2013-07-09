@@ -8,6 +8,11 @@ var UsersNewController = Ember.ObjectController.extend({
       App.AuthManager.authenticate(results.api_key.access_token, results.api_key.user_id);
       router.transitionTo('index');
       
+    }).fail(function(jqxhr, textStatus, error ) {
+      if (jqxhr.status === 422) {
+        errs = JSON.parse(jqxhr.responseText)
+        user.set('errors', errs.errors);
+      }
     });
   }
 });
