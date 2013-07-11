@@ -13,7 +13,7 @@ class ApiKey < ActiveRecord::Base
     self.expired_at = if self.scope == 'session'
                         4.hours.from_now
                       else
-                        30.days_from_now
+                        30.days.from_now
                       end
   end
 
